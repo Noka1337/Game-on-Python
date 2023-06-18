@@ -1,5 +1,5 @@
 # Game-on-Python
-The game was written in 2019 as an individual assignment at the institute
+The game was written in 2019 as an individual assignment at the institute - file: Игрулина.py
 
 ![image](https://github.com/Noka1337/Game-on-Python/assets/58054159/3f220438-497b-4203-90e7-4b0f702d1742)
 
