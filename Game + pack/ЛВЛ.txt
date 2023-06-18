@@ -1,0 +1,35 @@
+#Рисование уровня
+def Level(file,roads):
+    win.blit(fon, (100, 0))
+    global xRoad,yRoad,xK,yK
+
+    lvlfile=open(file,'rt')
+    lvlfile=[line.strip() for line in lvlfile ]
+    for y in range (len(lvlfile)):
+        for x in range(len(lvlfile[y])):
+            if lvlfile[y][x]== '1':
+                fon.blit(Road[0],(xRoad+2,yRoad+25))
+                xRoad+=62
+            elif lvlfile [y][x]=='2':
+                fon.blit (Road[1],(xRoad,yRoad))
+                xRoad+=62
+            elif lvlfile [y][x] == '3':
+                fon.blit(Road[2], (xRoad+2, yRoad+29))
+            elif lvlfile[y][x]=='4':
+                fon.blit (Road[3],(xK,yK))
+                xK+=32
+            elif lvlfile [y][x]=='0':
+                xRoad+=62
+
+        yRoad+=64
+        xRoad=0
+        yK+=70
+        xK=0
+    pygame.display.update()
+
+
+Road =[pygame.image.load('Road().png'),pygame.image.load('Road(1).png'),pygame.image.load('RoadPov().png'),pygame.image.load('Kusti(1).png')]
+xRoad=0
+yRoad=0
+xK=0
+yK=0
